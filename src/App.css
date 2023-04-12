@@ -109,7 +109,7 @@ main{
 }
 .siderow .link {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  
-  width: 100%; 
+  width: 90%; 
   color: #fff;
   height: 50px;
   /* margin-left: 5px; */
@@ -134,13 +134,14 @@ main{
 } */
 .link:hover{
   background:lightskyblue;
-  color: #000;
-  width: 95%;
+  color: #fff;
+  width: 90%;
+  border-radius: 25%;
   /* transition: all 0.5s; */
 }
 .active{
   /* background: lightskyblue; */
-  color: #000;
+  color: #fff;
 }
 .icon{
   font-size: 25px;
