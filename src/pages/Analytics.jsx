@@ -5,7 +5,7 @@ import '../App.css';
 // password: TigerEye
 const Analytics = () => {
     return (
-        <div style={{width:'100%', margin:0, overflow:"hidden",height:'100vh'}}>
+        <div style={{width:'100%', margin:0, overflow:"hidden", height:'100vh'}}>
             <iframe  
                 title='HeavyAI' width={'100%'} height={'100%'} margin={'1000'}
                 
