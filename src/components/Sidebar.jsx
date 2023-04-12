@@ -33,8 +33,8 @@ const Sidebar = ({children}) =>{
     ]
     
     return (
-        <div style={{height: "100vh", width: "70px", marginLeft: "10px", zIndex: "1", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}} className='siderow'>
-            <div style={{height: "400px", width: "70px", marginRight: "10px", background: "rgba(0, 0, 0, 0.62)", backdropFilter: "blur(12.7px)", WebkitBackdropFilter: "blur(12.7px)", borderRadius: "50px", display: "flex", flexDirection: "column", justifyContent: "space-around", alignItems: "center"
+        <div style={{height: "100vh", width: "70px", marginLeft: "10px", zIndex: "2", display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}} className='siderow'>
+            <div style={{height: "400px", width: "70px", marginRight: "10px", background: "rgba(0, 0, 0, 0.58)", backdropFilter: "blur(11.9px)", WebkitBackdropFilter: "blur(11.9px)", borderRadius: "50px", display: "flex", flexDirection: "column", justifyContent: "space-around", alignItems: "center"
         }}>
             {/* <div style={{display: "flex", flexDirection:"column", justifyContent: "center", alignItems: "center"}}>
                 <h1 style={{ display: isOpen ? "block" : "none", color: "white" }} className="logo">TigerEye</h1>
@@ -45,7 +45,7 @@ const Sidebar = ({children}) =>{
             
 
             {menuItem.map((item, index) => (
-                <Tooltip label={`${item.name}`} color={"black"} borderRadius={"5px"} padding={"10px"} backgroundColor={"white"} placement="right" aria-label='A tooltip'>
+                <Tooltip label={`${item.name}`} color={"black"} borderRadius={"5px"} padding={"12px"} backgroundColor={"white"} placement="right" aria-label='A tooltip'>
                     <NavLink to={item.path} key={index} className="link">
                         <div className="icon">{item.icon}</div>
                         <div style={{ display: isOpen ? "block" : "none" }}
