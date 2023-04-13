@@ -1,13 +1,17 @@
-
 .App {
   /* text-align: center; */
   height: 100vh;
   width: 100vw;
 }
 
+main {
+  position: relative;
+  z-index: 1;
+}
+
 .App-logo {
   height: 40vmin;
-  
+
   pointer-events: none;
 }
 
@@ -47,16 +51,16 @@
   }
 }
 
-.container{
-  display:flex;
+.container {
+  display: flex;
   height: 100%;
   /* width:100% */
 }
-main{
+main {
   width: 100%;
   padding: 20px;
 }
-.sidebar{
+.sidebar {
   background: #000;
   color: #fff;
   /* height: 10%; */
@@ -69,17 +73,17 @@ main{
   border-radius: 50px;
 }
 
-.top_section{
+.top_section {
   display: flex;
-  align-items:center;
-  padding:20px 15px;
+  align-items: center;
+  padding: 20px 15px;
   margin-bottom: 30px;
 }
-.logo{
+.logo {
   font-size: 20px;
   /* margin-top: -40px; */
 }
-.bars{
+.bars {
   display: flex;
   font-size: 25px;
   /* margin-bottom: 60px; */
@@ -98,18 +102,24 @@ main{
   width: auto;
   background-color: black;
 }
-.siderow{
-  /* display: flex;
-  flex-direction: row; */
+.siderow {
+  position: fixed;
+  top: 0;
+  left: 10px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: auto;
   width: auto;
   background-color: rgba(38, 41, 41, 0);
   border-radius: 50px;
-  /* padding: 50px 0px; */
 }
 .siderow .link {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;  
-  width: 90%; 
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  width: 90%;
   color: #fff;
   height: 50px;
   /* margin-left: 5px; */
@@ -117,8 +127,7 @@ main{
   transition: all 0.5s;
   padding-top: 20px;
   /* border: 1px solid white; */
-  list-style-type: none
-
+  list-style-type: none;
 }
 /* .link{
   width: 100%;
@@ -132,18 +141,18 @@ main{
   border: 1px solid white;
   list-style-type: none
 } */
-.link:hover{
-  background:lightskyblue;
+.link:hover {
+  background: lightskyblue;
   color: #fff;
   width: 90%;
   border-radius: 25%;
   /* transition: all 0.5s; */
 }
-.active{
+.active {
   /* background: lightskyblue; */
   color: #fff;
 }
-.icon{
+.icon {
   font-size: 25px;
   color: white;
   flex: 30%;
@@ -151,9 +160,8 @@ main{
   place-items: center;
   margin-bottom: 20px;
   /* margin-top: 20px; */
-  
 }
-.link_text{
+.link_text {
   font-size: 15px;
   color: white;
   flex: 70%;
