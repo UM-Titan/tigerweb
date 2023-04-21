@@ -28,12 +28,21 @@ const Sidebar = ({ children }) => {
   ];
 
   return (
-    <div className="siderow">
+    <div
+      style={{
+        width: "90px",
+        position: "relative",
+        height: "100vh",
+        backgroundColor: "transparent",
+      }}
+      className="siderow"
+    >
       <div
         style={{
           height: "400px",
           width: "70px",
           marginRight: "10px",
+          position: "fixed",
           background: "rgba(0, 0, 0, 0.58)",
           backdropFilter: "blur(11.9px)",
           WebkitBackdropFilter: "blur(11.9px)",
