@@ -30,14 +30,10 @@ const Sidebar = ({ children }) => {
   return (
     <div
       style={{
+        width: "90px",
+        position: "relative",
         height: "100vh",
-        width: "70px",
-        marginLeft: "10px",
-        zIndex: "2",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
+        backgroundColor: "transparent",
       }}
       className="siderow"
     >
@@ -46,6 +42,7 @@ const Sidebar = ({ children }) => {
           height: "400px",
           width: "70px",
           marginRight: "10px",
+          position: "fixed",
           background: "rgba(0, 0, 0, 0.58)",
           backdropFilter: "blur(11.9px)",
           WebkitBackdropFilter: "blur(11.9px)",
