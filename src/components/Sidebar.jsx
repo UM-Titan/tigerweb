@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaTh, FaHome, FaBars, FaRegChartBar } from "react-icons/fa";
-import { Tooltip } from "@chakra-ui/react";
+// import { Tooltip } from '@chakra-ui/react'
 
 import { NavLink } from "react-router-dom";
 import "../App.css";
@@ -28,41 +28,40 @@ const Sidebar = ({ children }) => {
   ];
 
   return (
-    <div
-      style={{
-        width: "90px",
-        position: "relative",
-        height: "100vh",
-        backgroundColor: "transparent",
-      }}
-      className="siderow"
-    >
+    <>
       <div
         style={{
-          height: "400px",
-          width: "70px",
-          marginRight: "10px",
-          position: "fixed",
-          background: "rgba(0, 0, 0, 0.58)",
-          backdropFilter: "blur(11.9px)",
-          WebkitBackdropFilter: "blur(11.9px)",
-          borderRadius: "50px",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-around",
-          alignItems: "center",
+          width: "90px",
+          position: "relative",
+          height: "100vh",
+          backgroundColor: "transparent",
         }}
+        className="siderow"
       >
-        {menuItem.map((item, index) => (
-          <Tooltip
-            label={`${item.name}`}
-            color={"black"}
-            borderRadius={"5px"}
-            padding={"12px"}
-            backgroundColor={"white"}
-            placement="right"
-            aria-label="A tooltip"
-          >
+        <div
+          style={{
+            height: "400px",
+            width: "70px",
+            marginRight: "10px",
+            position: "fixed",
+            background: "rgba(0, 0, 0, 0.58)",
+            backdropFilter: "blur(11.9px)",
+            WebkitBackdropFilter: "blur(11.9px)",
+            borderRadius: "50px",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-around",
+            alignItems: "center",
+          }}
+        >
+          {/* <div style={{display: "flex", flexDirection:"column", justifyContent: "center", alignItems: "center"}}>
+            <h1 style={{ display: isOpen ? "block" : "none", color: "white" }} className="logo">TigerEye</h1>
+            <div style={{ marginLeft: isOpen ? "50px" : "0px", color: "white" }} className="bars">
+                <FaBars onClick={toggle} />
+            </div>
+        </div> */}
+
+          {menuItem.map((item, index) => (
             <NavLink to={item.path} key={index} className="link">
               <div className="icon">{item.icon}</div>
               <div
@@ -72,11 +71,11 @@ const Sidebar = ({ children }) => {
                 {item.name}
               </div>
             </NavLink>
-          </Tooltip>
-        ))}
+          ))}
+        </div>
       </div>
-      <main>{children}</main>
-    </div>
+      {/* <main>{children}</main> */}
+    </>
   );
 };
 
