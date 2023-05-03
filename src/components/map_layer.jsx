@@ -284,6 +284,7 @@ const Map = () => {
         .slice(0, 2)
         .map((word) => word.split("_")[0])
         .join(" ");
+      console.log(streetNameFromData);
       if (streetNameFromData === firstTwoWords) {
         return streetNameFromData === firstTwoWords;
       }
@@ -300,7 +301,7 @@ const Map = () => {
       setViewport({
         latitude: filteredData[0].geometry.coordinates[1],
         longitude: filteredData[0].geometry.coordinates[0],
-        zoom: 15,
+        zoom: 20,
       });
     }
   };
